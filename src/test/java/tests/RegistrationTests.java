@@ -25,14 +25,53 @@ public class RegistrationTests extends TestBase{
         System.out.println(z);
 
         User user = new User()
-                .setEmail("snow" + i + "@gmail.com")
+                .setEmail("snow1"+ "@gmail.com")
                 .setPassword("Snow123456$");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
-        app.getHelperUser().sumit();
-     //   Assert.assertEquals(app.getHelperUser().getMessage(),"You are logged in success");
+        app.getHelperUser().submitReg();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+    }
+    @Test
+    public void regregisteredUser(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mmira1234$");
+        app.getHelperUser().submitReg();
+        app.getHelperUser().pause(5000);
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
 
+    }
+    @Test
+    public void regWrongEmail(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("miragmail.com","Mmira1234$");
+        app.getHelperUser().submitReg();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+
+    }
+    @Test
+    public void regWrongPassword(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mm1234$");
+        app.getHelperUser().submitReg();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+
+    }
+    @Test
+    public void regEmptyEmail(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("","Mmira1234$");
+        app.getHelperUser().submitReg();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+
+    }
+    @Test
+    public void regEmptyPassword(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","");
+        app.getHelperUser().submitReg();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
 
     }
 }

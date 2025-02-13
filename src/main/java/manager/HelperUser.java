@@ -33,13 +33,15 @@ public class HelperUser extends HelperBase{
         type(By.xpath("//input[last()]"),password);
     }
     public void fillLoginRegistrationForm(User user) {
-        type(By.id("email"), user.getEmail());
-        type(By.id("password"), user.getPassword());
+        type(By.name("email"), user.getEmail());
+        type(By.name("password"), user.getPassword());
     }
 
     public void sumit(){
         click(By.xpath("//button[text()='Login']"));
     }
+    public void submitReg(){
+        click(By.xpath("//button[text()='Registration']"));}
 
     public boolean isLogged() {
         return   isElementPresent(By.xpath("//button[text() = 'Sign Out']"));
@@ -48,4 +50,7 @@ public class HelperUser extends HelperBase{
     public void logout() {
         click(By.xpath("//button[text() = 'Sign Out']"));
     }
+
+
+
 }
