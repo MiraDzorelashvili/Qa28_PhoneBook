@@ -18,7 +18,7 @@ public class LoginTests extends TestBase {
     public void loginSuccess() {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mmira1234$");
-        app.getHelperUser().sumitLogin();
+        app.getHelperUser().sumit();
         //Assert
 //        Assert.assertEquals();
 //        Assert.assertNotEquals();
@@ -31,7 +31,7 @@ public class LoginTests extends TestBase {
     public void loginSuccessModel() {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mmira1234$");
-        app.getHelperUser().sumitLogin();
+        app.getHelperUser().sumit();
         Assert.assertTrue(app.getHelperUser().isLogged());
     }
 
@@ -40,7 +40,7 @@ public class LoginTests extends TestBase {
     public void loginWrongEmail(){
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("miragmail.com","Mmira1234$");
-        app.getHelperUser().sumitLogin();
+        app.getHelperUser().sumit();
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
     }
 
@@ -48,7 +48,7 @@ public class LoginTests extends TestBase {
     public void loginWrongPassword(){
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mma1234$");
-        app.getHelperUser().sumitLogin();
+        app.getHelperUser().sumit();
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
 
     }
@@ -57,9 +57,28 @@ public class LoginTests extends TestBase {
     public void loginUnregisteredUser(){
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("mira1@gmail.com","Mmira12345$");
-        app.getHelperUser().sumitLogin();
+        app.getHelperUser().sumit();
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
 
     }
+    @Test
+    public void loginEmptyUser(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(" ","Mmira12345$");
+        app.getHelperUser().sumit();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+
+    }
+    @Test
+    public void loginEmptyPassword(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("mira1@gmail.com"," ");
+        app.getHelperUser().sumit();
+       Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+
+    }
+
+
+
 
 }
