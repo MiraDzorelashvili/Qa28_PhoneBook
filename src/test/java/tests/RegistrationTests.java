@@ -29,7 +29,7 @@ public class RegistrationTests extends TestBase{
                 .setPassword("Snow123456$");
 
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("mira@gmail.com","Mmira1234$");
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().sumit();
      //   Assert.assertEquals(app.getHelperUser().getMessage(),"You are logged in success");
 

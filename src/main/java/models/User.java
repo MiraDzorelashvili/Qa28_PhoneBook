@@ -4,11 +4,15 @@ public class User {
     private String email;
     private String password;
 
-    public void setEmail(String email) {
+    public User setEmail(String email) {
         this.email = email;
+        return this;
     }
 
-    public void setPassword(String password) {this.password = password;}
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
 
 
     public String getEmail() {
