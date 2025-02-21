@@ -15,15 +15,15 @@ public class HelperContact extends HelperBase{
     }
 
     public void fillContactForm(Contact contact) {
-        type(By.name("Name"), contact.getName());
-        type(By.name("Lastname"), contact.getLastname());
-        type(By.name("Phone"), contact.getPhone());
-        type(By.name("Email"), contact.getEmail());
-        type(By.name("Address"), contact.getAddress());
-        type(By.name("Description"), contact.getDescription());
+        type(By.cssSelector(" input[placeholder='Name']"), contact.getName());
+        type(By.cssSelector(" input[placeholder='Last Name']"), contact.getLastname());
+        type(By.cssSelector(" input[placeholder='Phone']"), contact.getPhone());
+        type(By.cssSelector(" input[placeholder='email']"), contact.getEmail());
+        type(By.cssSelector(" input[placeholder='Address']"), contact.getAddress());
+        type(By.cssSelector(" input[placeholder='description']"), contact.getDescription());
     }
 
     public void submitContactForm() {
-            click(By.xpath("//button[text()='Save']"));
+            click(By.xpath("//div[@class='add_form__2rsm2']//button"));
     }
 }
