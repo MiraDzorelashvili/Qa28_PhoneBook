@@ -4,6 +4,16 @@ public class User {
     private String email;
     private String password;
 
+    public User withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public User withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
     public User setEmail(String email) {
         this.email = email;
         return this;

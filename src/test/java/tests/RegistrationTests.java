@@ -74,4 +74,17 @@ public class RegistrationTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
 
     }
+    @Test
+    public void registrationSuccess3(){
+        int i = new Random().nextInt(1000)+1000;
+        User user = new User().withEmail("mira"  +"@gmail.com")
+                .withPassword("Mmira1234$");
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
+        app.getHelperUser().submitReg();
+
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
+    }
 }

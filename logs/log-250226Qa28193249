@@ -1,0 +1,25 @@
+19:33:12.407 INFO  manager.ApplicationManager - All tests rus in Chrome Browser
+19:33:15.851 INFO  manager.ApplicationManager - The link ----->https://telranedu.web.app/home
+19:33:15.878 INFO  tests.TestBase - Name of method ---->loginEmptyPassword
+19:33:20.946 INFO  tests.TestBase - Before method finished logout
+19:33:24.766 INFO  tests.TestBase - Name of method ---->loginEmptyUser
+19:33:29.806 INFO  tests.TestBase - Before method finished logout
+19:33:31.772 INFO  tests.TestBase - Name of method ---->loginSuccess
+19:33:36.838 INFO  tests.TestBase - Before method finished logout
+19:33:36.848 INFO  tests.TestBase - Start test with name 'loginSuccess'
+19:33:37.514 INFO  tests.TestBase - Test data ---> email: 'mira@gmail.com' & password: 'Mmira1234$'
+19:33:38.396 INFO  tests.TestBase - Assert check is element button 'Sigh out' present
+19:33:38.399 INFO  tests.TestBase - Name of method ---->loginSuccessModel
+19:33:38.576 INFO  tests.TestBase - Before method finished logout
+19:33:39.822 INFO  tests.TestBase - Name of method ---->loginUnregisteredUser
+19:33:39.941 INFO  tests.TestBase - Before method finished logout
+19:33:39.942 INFO  tests.TestBase - Test data ---> email: 'miragmail.com' & password: 'Maira1234$'
+19:33:41.442 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'
+19:33:41.446 INFO  tests.TestBase - Name of method ---->loginWrongEmail
+19:33:46.468 INFO  tests.TestBase - Before method finished logout
+19:33:46.472 INFO  tests.TestBase - Test data ---> email: 'miragmail.com' & password: 'Mmira1234$'
+19:33:48.613 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'
+19:33:48.619 INFO  tests.TestBase - Name of method ---->loginWrongPassword
+19:33:53.710 INFO  tests.TestBase - Before method finished logout
+19:33:53.713 INFO  tests.TestBase - Test data ---> email: 'mira@gmail.com' & password: 'Mmira124$'
+19:33:55.332 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'

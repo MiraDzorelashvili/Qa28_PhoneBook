@@ -16,9 +16,9 @@ public class AddNewContactTests extends TestBase{
     }
     @Test
     public void addNewContactSuccessFull(){
-        int i = (int)(System.currentTimeMillis()/1000)%3600;
+        int i = (int)((System.currentTimeMillis()/1000)%3600);
         Contact contact = Contact.builder()
-                .name("Nina")
+                .name("Nina"+ i)
                 .lastname("Koen")
                 .phone("0521234567")
                 .email("nina@gmail.com")
@@ -27,6 +27,7 @@ public class AddNewContactTests extends TestBase{
                 .build();
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
+        app.getHelperContact().getScreen("src/test/screenshots/screen-" + i +".png");
         app.getHelperContact().submitContactForm();
         Assert.assertTrue(app.getHelperUser().isAdded());
     }
