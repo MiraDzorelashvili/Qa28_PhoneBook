@@ -77,7 +77,7 @@ public class HelperContact extends HelperBase{
                 .build();
         openContactForm();
         fillContactForm(contact);
-        isAdded();
+        submitContactForm();
         pause(500);
     }
 }
