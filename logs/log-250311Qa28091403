@@ -1,0 +1,9 @@
+09:14:08.554 INFO  manager.ApplicationManager - All tests rus in Chrome Browser
+09:14:09.645 INFO  manager.ApplicationManager - The link ----->https://telranedu.web.app/home
+09:14:10.555 INFO  tests.TestBase - Name of method ---->regEmptyEmail
+09:14:15.917 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+09:14:16.805 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+09:14:18.156 INFO  tests.TestBase - Name of method ---->regEmptyPassword
+09:14:23.382 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+09:14:24.218 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+09:14:25.434 INFO  tests.TestBase - Name of method ---->regWrongEmail

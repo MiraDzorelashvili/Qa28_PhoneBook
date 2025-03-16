@@ -1,0 +1,23 @@
+20:38:35.286 INFO  manager.ApplicationManager - All tests rus in Chrome Browser
+20:38:36.409 INFO  manager.ApplicationManager - The link ----->https://telranedu.web.app/home
+20:38:36.758 INFO  tests.TestBase - Name of method ---->loginSuccess
+20:38:41.794 INFO  tests.TestBase - Before method finished logout
+20:38:41.807 INFO  tests.TestBase - Start test with name 'loginSuccess'
+20:38:41.898 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:38:42.171 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+20:38:42.172 INFO  tests.TestBase - Test data ---> email: margo@gmail.com & password: Mmar123456$
+20:38:43.508 INFO  tests.TestBase - Assert check is element button 'Sigh out' present
+20:38:43.512 INFO  tests.TestBase - Name of method ---->loginSuccess
+20:38:43.608 INFO  tests.TestBase - Before method finished logout
+20:38:43.609 INFO  tests.TestBase - Start test with name 'loginSuccess'
+20:38:43.690 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:38:43.954 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+20:38:43.954 INFO  tests.TestBase - Test data ---> email: mira@gmail.com & password: Mmira1234$
+20:38:44.332 INFO  tests.TestBase - Assert check is element button 'Sigh out' present
+20:38:44.333 INFO  tests.TestBase - Name of method ---->loginSuccess
+20:38:44.422 INFO  tests.TestBase - Before method finished logout
+20:38:44.423 INFO  tests.TestBase - Start test with name 'loginSuccess'
+20:38:44.474 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:38:44.720 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+20:38:44.720 INFO  tests.TestBase - Test data ---> email: mara@gmail.com & password: Mmar123456$
+20:38:45.112 INFO  tests.TestBase - Assert check is element button 'Sigh out' present

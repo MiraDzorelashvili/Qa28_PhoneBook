@@ -1,0 +1,17 @@
+20:53:46.064 INFO  manager.ApplicationManager - All tests rus in Chrome Browser
+20:53:47.358 INFO  manager.ApplicationManager - The link ----->https://telranedu.web.app/home
+20:53:47.716 INFO  tests.TestBase - Name of method ---->loginSuccessModel
+20:53:52.773 INFO  tests.TestBase - Before method finished logout
+20:53:52.776 INFO  tests.TestBase - Test data --->User{email='margo@gmail.com', password='Mmar123456$'}
+20:53:52.846 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:53:53.127 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+20:53:54.455 INFO  tests.TestBase - Name of method ---->loginSuccessModel
+20:53:54.550 INFO  tests.TestBase - Before method finished logout
+20:53:54.552 INFO  tests.TestBase - Test data --->User{email='mira@gmail.com', password='Mmira1234$'}
+20:53:54.621 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:53:54.881 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
+20:53:55.265 INFO  tests.TestBase - Name of method ---->loginSuccessModel
+20:53:55.348 INFO  tests.TestBase - Before method finished logout
+20:53:55.349 INFO  tests.TestBase - Test data --->User{email='mara@gmail.com', password='Mmar123456$'}
+20:53:55.407 INFO  manager.HelperBase - Open form by click on button with locator 'By.cssSelector("a[href='/login']
+20:53:55.669 INFO  manager.HelperBase - Type in input with locator 'By.name("email")'
